@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+
+table a{
+    text-decoration: none;
+    color: black;
+}
+
+table a:hover{
+    text-decoration: underline;
+}
+
+.notice{
+    margin: 8% 15%;
+    border: 1px solid #bdb8d7;
+    max-width: 40%;
+    padding: 10px;
+}
+
+table{
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table>thead>tr>th{
+    border-bottom: 2px solid black;
+}
+
+table>tbody>tr>td{
+    border-bottom: 1px solid #cccccc;
+    padding: 3px;
+}
+
+table>tbody>tr>td a{
+    font-weight: bold;
+}
+
+.title{
+    width: 200px;
+}
+
+.writer{
+    width: 100px;
+}
+
+.date{
+    width: 100px;
+}
+
+h3{
+    border-bottom: 1px solid #cccccc;
+    text-align: center;
+    color: dodgerblue;
+}
+
+.quote{
+    border: 1px solid #bdb8d7;
+    margin-left: 60%;
+    margin-top: -390px;
+    width: 500px;
+    background-color: #4b4276;
+    border-radius: 5px;
+}
+
+#quoteText{
+    color: white;
+    padding: 5px;
+}
+
+#quoteAuthor{
+    color: deepskyblue;
+    text-align: right;
+    padding: 10px;
+}
+
+.weather{
+    width: 500px;
+    margin-left: 60%;
+    margin-top: 20px;
+    border: 1px solid #bdb8d7;
+    padding: 10px;
+}
+
+.situation{
+    float: left;
+    margin-left: 30px;
+}
+
+.current_temp{
+    font-size: 50pt;
+}
+
+.weather_description{
+    font-size: 20pt;
+}
+
+.city{
+    font-size: 13pt;
+}
+
+.temp{
+    margin-left: 300px;
+}
+
+.comm{
+    border: 1px solid #bdb8d7;
+    width: 1180px;
+    margin-left: 15%;
+    margin-top: 80px;
+    padding: 10px;
+}

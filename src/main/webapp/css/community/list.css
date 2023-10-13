@@ -1,0 +1,135 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    width: 80%;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+table > thead > tr > th,
+table > tbody > tr > td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+table > thead > tr > th {
+    border-top: 2px solid #4b4276;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#category_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.category_button {
+    margin: 5px;
+    padding: 7px 20px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    background-color: #9370DB;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.category_button:hover {
+    background-color: #7B68EE;
+}
+
+.text {
+    text-align: center;
+}
+
+.pagination {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.page-item {
+    padding: 5px 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #333;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.page-item:hover {
+    background-color: #7B68EE;
+}
+
+.page-item.current {
+    font-weight: bold;
+    background-color: #7B68EE;
+}
+
+.board-content {
+    margin-left: 250px;
+    margin-top: 80px;
+    padding: 20px;
+    max-width: 1200px;
+    width: calc(100% - 250px);
+    background-color: #f3f5f9;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#table a{
+    text-decoration: none;
+    color: black;
+}
+
+#table a:hover{
+    text-decoration: underline;
+}
+
+.write{
+    margin-left: 70%;
+    border: solid 1px #7B68EE;
+    border-radius: 10px;
+    background-color: #7B68EE;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.write a{
+    color: white;
+    display: block;
+}
+
+table>tbody>tr>td a{
+    font-weight: bold;
+}
