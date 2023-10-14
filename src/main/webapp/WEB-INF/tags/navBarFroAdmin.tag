@@ -24,7 +24,7 @@
 
 <div class="wrapper">
     <div class="sidebar">
-        <a href="/home"><h2>HRM</h2></a>
+        <a href="/home"><h2>StaffHub</h2></a>
         <ul>
             <li><a href="/home"><i class="fas fa-home"></i>Home</a></li>
             <li><a href="/member/info?id=<sec:authentication property="name"/>"><i class="fas fa-solid fa-address-card"></i>마이페이지</a>

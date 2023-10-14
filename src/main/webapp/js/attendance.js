@@ -7,8 +7,10 @@ function checkInitialAttendance() {
 
     if (isCheckedIn === "true") {
         toggleButton.innerText = "출근";
+        toggleButton.style.backgroundColor = "#4b4276";
     } else {
         toggleButton.innerText = "퇴근";
+        toggleButton.style.backgroundColor = "blue";
     }
 }
 
@@ -22,6 +24,7 @@ function toggleAttendance() {
             .then(() => {
                 localStorage.setItem("isCheckedIn", "false");
                 toggleButton.innerText = "퇴근";
+                toggleButton.style.backgroundColor = "blue";
                 const message = "출근했습니다.";
                 const currentTime = new Date().toLocaleString();
                 alert(`${message} 시간: ${currentTime}`);
@@ -34,6 +37,7 @@ function toggleAttendance() {
             .then(() => {
                 localStorage.setItem("isCheckedIn", "true");
                 toggleButton.innerText = "출근";
+                toggleButton.style.backgroundColor = "#4b4276";
                 const message = "퇴근했습니다.";
                 const currentTime = new Date().toLocaleString();
                 alert(`${message} 시간: ${currentTime}`);
