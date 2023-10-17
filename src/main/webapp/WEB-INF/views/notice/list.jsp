@@ -45,7 +45,7 @@
                     <td class="text">
                         <a href="/notice/id/${notice.id}">${notice.title}</a>
                     </td>
-                    <td>${notice.writer}</td>
+                    <td>${notice.name}</td>
                     <td>${notice.inserted}</td>
                 </tr>
             </c:forEach>

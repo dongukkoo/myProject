@@ -27,7 +27,7 @@
             </div>
             <div class="writer">
                 <label class="form-label">작성자</label>
-                <input type="text" class="wri_con" value="${communityList.writer}" readonly>
+                <input type="text" class="wri_con" value="${communityList.name}" readonly>
             </div>
         </div>
         <div class="content">

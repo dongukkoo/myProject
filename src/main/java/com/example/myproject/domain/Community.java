@@ -12,6 +12,7 @@ public class Community {
     private String body;
     private String writer;
     private LocalDate inserted;
+    private String name;
 
     private Integer commentCount;
 }

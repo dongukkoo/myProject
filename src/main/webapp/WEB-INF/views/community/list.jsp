@@ -61,7 +61,7 @@
                         <span class="badge rounded-pill text-bg-dark"> ${community.commentCount } </span>
                     </c:if>
                 </td>
-                <td>${community.writer}</td>
+                <td>${community.name}</td>
                 <td>${community.inserted}</td>
             </tr>
         </c:forEach>

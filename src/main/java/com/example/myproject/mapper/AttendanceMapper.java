@@ -32,7 +32,12 @@ public interface AttendanceMapper {
 
 
     @Select("""
-            SELECT a.id, a.userId, a.checkIn, a.checkOut, m.name
+            SELECT 
+                a.id, 
+                a.userId, 
+                a.checkIn, 
+                a.checkOut, 
+                m.name
             FROM Attendance a
             INNER JOIN Member m ON a.userId = m.id
             ORDER BY a.id DESC;

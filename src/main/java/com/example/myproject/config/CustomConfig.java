@@ -30,6 +30,9 @@ public class CustomConfig {
         http.logout().logoutUrl("/member/logout")
                 .logoutSuccessUrl("/member/login");
 
+
+
+
         return http.build();
     }
 }

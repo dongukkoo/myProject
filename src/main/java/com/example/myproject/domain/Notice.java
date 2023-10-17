@@ -11,4 +11,5 @@ public class Notice {
     private String writer;
     private String body;
     private LocalDate inserted;
+    private String name;
 }

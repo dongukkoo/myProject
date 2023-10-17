@@ -36,7 +36,7 @@
                     <td>
                         <a href="/notice/id/${notice.id}">${notice.title}</a>
                     </td>
-                    <td>${notice.writer}</td>
+                    <td>${notice.name}</td>
                     <td>${notice.inserted}</td>
                 </tr>
             </c:forEach>
@@ -87,7 +87,7 @@
                         <span class="badge rounded-pill text-bg-dark"> ${community.commentCount } </span>
                     </c:if>
                 </td>
-                <td>${community.writer}</td>
+                <td>${community.name}</td>
                 <td>${community.inserted}</td>
             </tr>
         </c:forEach>

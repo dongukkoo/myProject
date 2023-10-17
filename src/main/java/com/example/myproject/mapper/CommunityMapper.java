@@ -10,18 +10,18 @@ public interface CommunityMapper {
 
     @Select("""
             SELECT
-                	id,
-                    title,
-                    body,
-                    inserted,
-                    writer,
-                    (SELECT COUNT(*)
+                c.id,
+                c.title,
+                c.body,
+                c.inserted,
+                m.name,
+                (SELECT COUNT(*)
                     FROM CommunityComment
                     WHERE communityId = id) commentCount
-                    FROM Community
-                    WHERE id = #{id}
+            FROM Community c 
+            INNER JOIN Member m ON c.writer = m.id
+            WHERE c.id = #{c.id}
             """)
-//    @ResultMap("communityResultMap")
     Community selectById(Integer id);
 
     @Insert("""
@@ -57,16 +57,16 @@ public interface CommunityMapper {
             <script>
             			<bind name="pattern" value="'%' + search + '%'" />
             			SELECT
-            				id,
-            				title,
-            				writer,
-            				inserted,
-            				category,
+            			    c.id,
+            			    c.title,
+            			    c.inserted,
+            			    c.category,
+            			    m.name,
             			    (SELECT COUNT(*)
             			     FROM CommunityComment
-            			     WHERE communityId = id) commentCount
-                        
-            			FROM Community
+            			     WHERE communityId = id) commentCount            			            			                        
+            			FROM Community c
+            			INNER JOIN Member m ON c.writer = m.id
             			WHERE (category = #{category} OR #{category} IS NULL)
                         
             			
@@ -80,8 +80,8 @@ public interface CommunityMapper {
             			         AND writer LIKE #{pattern}
             			     </if>
                         
-            			GROUP BY id
-            			ORDER BY id DESC
+            			GROUP BY c.id
+            			ORDER BY c.id DESC
             			LIMIT #{startIndex}, #{rowPerPage}
             </script>
             """)
@@ -109,13 +109,14 @@ public interface CommunityMapper {
 
     @Select("""
             SELECT
-                id,
-                category,
-                title,
-                writer,
-                inserted
-            FROM Community
-            ORDER BY id DESC
+                c.id,
+                c.category,
+                c.title,
+                c.inserted,
+                m.name
+            FROM Community c
+            INNER JOIN Member m ON c.writer = m.id
+            ORDER BY c.id DESC
             LIMIT 7
             """)
     List<Community> selectAll();

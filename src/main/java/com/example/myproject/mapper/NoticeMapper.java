@@ -34,12 +34,13 @@ public interface NoticeMapper {
             <script>
             			<bind name="pattern" value="'%' + search + '%'" />
             			SELECT
-            				id,
-            				title,
-            				writer,
-            				body,
-            				inserted                        
-            			FROM Notice
+            				n.id,
+            				n.title,
+            				n.body,
+            				n.inserted,
+            				m.name                       
+            			FROM Notice n
+            			INNER JOIN Member m ON n.writer = m.id 
             			<where>
             				 <if test="type eq 'title'">
             			         AND title LIKE #{pattern}
@@ -51,8 +52,8 @@ public interface NoticeMapper {
             			         AND writer LIKE #{pattern}
             			     </if>
             			</where>                        
-            			GROUP BY id
-            			ORDER BY id DESC
+            			GROUP BY n.id
+            			ORDER BY n.id DESC
             			LIMIT #{startIndex}, #{rowPerPage}
             </script>
             """)
@@ -96,12 +97,13 @@ public interface NoticeMapper {
 
     @Select("""
             SELECT
-                id,
-                title,
-                writer,
-                inserted
-            FROM Notice
-            ORDER BY id DESC
+                n.id,
+                n.title,
+                n.inserted,
+                m.name
+            FROM Notice n
+            INNER JOIN Member m ON n.writer = m.id
+            ORDER BY n.id DESC
             """)
     List<Notice> selectAll();
 }
